@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import sample.SearchComboBox?>
+
+
+<?import javafx.scene.control.ScrollPane?>
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="libro.LibroController2">
+
+   <BorderPane>
+   <bottom>
+      <TableView fx:id="tblLibros" prefHeight="265.0" prefWidth="1500.0" BorderPane.alignment="CENTER" />
+   </bottom>
+
+
+   <center>
+      <AnchorPane prefHeight="629.0" prefWidth="1500.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="194.0" layoutY="13.0" text="Titulo" />
+            <TextField fx:id="txtTitulo" layoutX="233.0" layoutY="9.0" prefHeight="26.0" prefWidth="789.0" promptText="Ingrese el titulo" />
+            <HBox alignment="CENTER" layoutX="14.0" layoutY="47.0" prefHeight="260.0" prefWidth="1010.0" spacing="20.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="234.0" prefWidth="305.0" spacing="5.0">
+                     <children>
+                        <Label text="Autor(es)" />
+                        <SearchComboBox fx:id="cbxAutores" prefWidth="150.0" promptText="Seleccionar" />
+                        <Button fx:id="btnAgregarAutor" mnemonicParsing="false" text="Agregar" />
+                        <TableView fx:id="tblAutores" prefHeight="200.0" prefWidth="300.0" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="305.0" spacing="5.0">
+                     <children>
+                        <Label text="Categoria(s)" />
+                        <SearchComboBox fx:id="cbxCategoria" prefWidth="150.0" promptText="Seleccionar" />
+                        <Button fx:id="btnAgregarCategoria" mnemonicParsing="false" text="Agregar" />
+                        <TableView fx:id="tblCategorias" prefHeight="200.0" prefWidth="202.0" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="305.0" spacing="5.0">
+                     <children>
+                        <Label text="Archivo(s)" />
+                        <HBox prefHeight="32.0" prefWidth="305.0">
+                           <children>
+                              <TextField fx:id="txtArchivo" editable="false" prefHeight="31.0" prefWidth="153.0" promptText="Dirección" />
+                              <SearchComboBox fx:id="cbxIdioma" prefWidth="150.0" promptText="Idioma" />
+                           </children>
+                        </HBox>
+                        <Button fx:id="btnAgregarArchivo" mnemonicParsing="false" text="Agregar" />
+                        <TableView fx:id="tblArchivos" prefHeight="200.0" prefWidth="202.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Label layoutX="66.0" layoutY="13.0" text="ID" />
+            <TextField fx:id="txtID" disable="true" layoutX="99.0" layoutY="9.0" prefHeight="26.0" prefWidth="56.0" promptText="ID" />
+            <ImageView fx:id="imgLibro" fitHeight="518.0" fitWidth="398.0" layoutX="1074.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/resources/null.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="50.0" layoutY="326.0" text="Sinopsis" />
+            <TextArea fx:id="txtContenido" layoutX="44.0" layoutY="344.0" prefHeight="122.0" prefWidth="954.0" wrapText="true" />
+            <Label layoutX="99.0" layoutY="502.0" text="Paginas " />
+            <Label layoutX="403.0" layoutY="502.0" text="Publicacion " />
+            <Label layoutX="733.0" layoutY="502.0" text="Editorial " />
+            <TextField fx:id="txtPaginas" layoutX="154.0" layoutY="499.0" promptText="Número de paginas" />
+            <HBox alignment="CENTER" layoutX="1113.0" layoutY="542.0" prefHeight="43.0" prefWidth="320.0" spacing="5.0">
+               <children>
+                  <Button fx:id="btnAnteriorImg" mnemonicParsing="false" text="Anterior" />
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                     <children>
+                        <Button fx:id="btnAgregarImg" mnemonicParsing="false" text="Agregar" />
+                        <Button fx:id="btnEliminarImg" mnemonicParsing="false" text="Eliminar" />
+                     </children>
+                  </VBox>
+                  <Button fx:id="btnSiguienteImg" mnemonicParsing="false" text="Siguiente" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="355.0" layoutY="554.0" prefHeight="43.0" prefWidth="332.0" spacing="5.0" AnchorPane.leftAnchor="355.0" AnchorPane.rightAnchor="813.0" AnchorPane.topAnchor="554.0">
+               <children>
+                  <Button fx:id="btnNew" mnemonicParsing="false" text="Nuevo" />
+                  <Button fx:id="btnSave" mnemonicParsing="false" text="Guardar" />
+                  <Button fx:id="btnDelete" mnemonicParsing="false" text="Borrar" />
+                   <Button fx:id="btnCancel" mnemonicParsing="false" text="Cancelar" />
+               </children>
+            </HBox>
+            <DatePicker fx:id="dptPublicacion" layoutX="480.0" layoutY="498.0" prefHeight="26.0" prefWidth="157.0" />
+            <SearchComboBox fx:id="cbxEditorial" layoutX="790.0" layoutY="498.0" prefWidth="130.0" promptText="Seleccionar" />
+         </children>
+      </AnchorPane>
+   </center>
+   </BorderPane>
+</ScrollPane>

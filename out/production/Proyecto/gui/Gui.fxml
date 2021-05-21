@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane minHeight="1000" minWidth="650"
+            xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.172-ea"
+            fx:controller="gui.GuiController"
+            fx:id="brpPrincipal">
+
+    <top>
+        <MenuBar>
+            <menus>
+                <Menu text="Usuario" fx:id="miCuenta">
+                    <items>
+                        <MenuItem text="Inicio" fx:id="miInicio"/>
+                        <MenuItem text="Historial"  fx:id="miHistorial"/>
+                        <MenuItem text="Favoritos" fx:id="miFavorito"/>
+                        <MenuItem text="Sugerir libro" fx:id="miSugerir"/>
+                        <MenuItem text="Cerrar sesión" fx:id="miSesion"/>
+                    </items>
+                </Menu>
+                <Menu text="Administración" fx:id="miAdmin" visible="false">
+                    <items>
+                        <MenuItem text="Libros" fx:id="miLibro"/>
+                        <Menu text="Edicion libros">
+                            <MenuItem text="Autores por libro" fx:id="miLibroAutor"/>
+                            <MenuItem text="Categorias por libro" fx:id="miLibroCategoria"/>
+                            <MenuItem text="Archivos por libro" fx:id="miLibroArchivo"/>
+                            <MenuItem text="Imagenes por libro" fx:id="miLibroImagen"/>
+                        </Menu>
+                        <MenuItem text="Autores" fx:id="miAutor"/>
+                        <MenuItem text="Nacionalidades" fx:id="miNacionalidad"/>
+                        <MenuItem text="Categorias" fx:id="miCategoria"/>
+                        <MenuItem text="Editoriales" fx:id="miEditorial"/>
+                        <MenuItem text="Idiomas" fx:id="miIdioma"/>
+                        <MenuItem text="Usuarios" fx:id="miUsuario"/>
+                        <MenuItem text="Sugerencias" fx:id="miSugerencia"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+
+    <bottom>
+        <Button fx:id="btn" visible="false"/>
+    </bottom>
+
+</BorderPane>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import sample.SearchComboBox?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="autores.AutoresController" spacing="5" alignment="CENTER">
+
+    <SearchComboBox fx:id="cbxLibros" promptText="Seleccione el libro"/>
+
+    <SearchComboBox fx:id="cbxAutores" promptText="Seleccione el autor"/>
+
+    <HBox alignment="CENTER">
+        <Button text="Agregar" fx:id="btnAdd"/>
+        <Button text="Borrar" fx:id="btnDelete"/>
+    </HBox>
+
+    <TableView fx:id="tblAutor2" prefWidth="500" maxWidth="500"/>
+</VBox>

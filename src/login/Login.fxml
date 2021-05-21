@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+
+<GridPane fx:controller="login.LoginController"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+
+    <Label text="ReLibros" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.halignment="CENTER">
+        <graphic>
+            <FontAwesomeIconView glyphName="USER_CIRCLE_ALT" glyphSize="30" fill="white"/>
+        </graphic>
+    </Label>
+    <ComboBox fx:id="cbxTipo" promptText="Tipo de Usuario" GridPane.rowIndex="1" GridPane.halignment="CENTER" />
+    <TextField fx:id="txtUser" GridPane.columnIndex="0" GridPane.rowIndex="2" promptText="Usuario"></TextField>
+    <PasswordField fx:id="txtPass" GridPane.columnIndex="0" GridPane.rowIndex="3" promptText="Contrasela"></PasswordField>
+    <HBox GridPane.rowIndex="4" GridPane.columnIndex="0" alignment="CENTER" spacing="15">
+        <Button fx:id="btnAcept" text="Aceptar">
+            <graphic>
+                <FontAwesomeIconView glyphName="CHECK" glyphSize="30" fill="white"/>
+            </graphic>
+        </Button>
+
+        <Button fx:id="btnCan" text="Cancelar" >
+            <graphic>
+                <FontAwesomeIconView glyphName="WINDOW_CLOSE" glyphSize="30" fill="white"/>
+            </graphic>
+        </Button>
+    </HBox>
+    <HBox GridPane.rowIndex="5" GridPane.columnIndex="0" alignment="CENTER">
+        <Button fx:id="btnRegistrar" text="Nuevo usuario">
+
+        </Button>
+    </HBox>
+</GridPane>

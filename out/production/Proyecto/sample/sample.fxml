@@ -1,0 +1,48 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<VBox fx:controller="sample.Controller"
+        xmlns:fx="http://javafx.com/fxml" alignment="center"
+        spacing="5">
+
+    <Button fx:id="btnImagenes" text="Imagenes"/>
+
+    <Button fx:id="btnPDF" text="PDFs"/>
+
+    <Button fx:id="btnIdiomas" text="Idiomas"/>
+
+    <Button fx:id="btnLogin" text="Login"/>
+
+    <Button fx:id="btnEditorial" text="Editorial"/>
+
+    <Button fx:id="btnCategoria" text="Categoria"/>
+
+    <Button fx:id="btnLibro" text="Libros"/>
+
+    <Button fx:id="btnNacionalidad" text="Nacionalidad"/>
+
+    <Button fx:id="btnAutor" text="Autor"/>
+
+    <Button fx:id="btnGUI" text="GUI"/>
+
+    <Button fx:id="btnSugerencia" text="Sugerencia"/>
+
+    <Button fx:id="btnVistaLibro" text="Vista libro"/>
+
+    <Button fx:id="btnListaLibros" text="Lista libros"/>
+
+    <Button fx:id="btnUsuario" text="Añadir Usuario"/>
+
+    <Button fx:id="btnAutores" text="Autores"/>
+
+    <Button fx:id="btnCategorias" text="Categorias"/>
+
+    <Button fx:id="btnFavoritos" text="Favoritos"/>
+
+    <Button fx:id="btnHistorial" text="Historial"/>
+
+    <Button fx:id="btnVerSugerencia" text="Ver sugerencia"/>
+
+</VBox>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import de.jensd.fx.glyphs.icons525.Icons525View?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="editorial.EditorialController"
+            >
+    <center>
+        <VBox spacing="5" alignment="CENTER">
+            <GridPane vgap="10" hgap="5" alignment="CENTER">
+                <Label text="ID: " GridPane.rowIndex="0" GridPane.columnIndex="0" />
+                <TextField fx:id="txtID" GridPane.rowIndex="0" GridPane.columnIndex="1" disable="true"/>
+                <Label text="Name: " GridPane.rowIndex="1" GridPane.columnIndex="0" />
+                <TextField fx:id="txtName" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            </GridPane>
+            <HBox spacing="5" alignment="CENTER">
+                <Button text="Nuevo" fx:id="btnNew">
+                </Button>
+                <Button text="Borrar" fx:id="btnDelete">
+                </Button>
+                <Button text="Guardar" fx:id="btnSave">
+                </Button>
+                <Button text="Cancelar" fx:id="btnCancel">
+                </Button>
+            </HBox>
+            <TableView fx:id="tblEditorial" prefWidth="500" maxWidth="500"/>
+        </VBox>
+    </center>
+</BorderPane>

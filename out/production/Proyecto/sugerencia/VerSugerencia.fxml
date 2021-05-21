@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="900.0" prefWidth="1500.0"
+            xmlns="http://javafx.com/javafx/8.0.172-ea"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sugerencia.VerSugerenciaController">
+
+    <center>
+            <GridPane alignment="CENTER" hgap="5" vgap="5">
+                <Label text="idSugerencia" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                <TextField fx:id="txtID" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                <Label text="Usuario" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                <TextField fx:id="txtUsuario" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+                <Label text="Titulo" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <TextField fx:id="txtTitulo" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                <Label text="Autor" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <TextField fx:id="txtAutor"  GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+                <Label text="Sinopsis" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+                <TextArea fx:id="txtContenido" GridPane.columnIndex="1" GridPane.rowIndex="4" wrapText="true"/>
+
+                <Label text="Archivo" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+                <Button text="Archivo" fx:id="btnArchivo"  GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+
+
+            </GridPane>
+    </center>
+
+    <bottom>
+        <VBox fx:id="vboxLista">
+            <TableView fx:id="tblSugerencias" />
+        </VBox>
+    </bottom>
+
+
+</BorderPane>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import de.jensd.fx.glyphs.icons525.Icons525View?>
+<?import sample.SearchComboBox?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="libro.LibroController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <center>
+        <VBox>
+            <GridPane>
+                <Label text="Titulo" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                <TextField fx:id="txtTitulo" GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.columnSpan="2"/>
+                <Label text="idLibro" GridPane.columnIndex="5" GridPane.rowIndex="0"/>
+                <TextField fx:id="txtID" GridPane.columnIndex="6" GridPane.rowIndex="0"/>
+
+                <Label text="Autor" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER"/>
+                <SearchComboBox fx:id="cbxAutor" promptText="Autor" GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.halignment="CENTER"/>
+                <TableView fx:id="tblAutores" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.rowSpan="3" GridPane.columnSpan="2"/>
+
+                <Label text="Categoria" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER"/>
+                <SearchComboBox fx:id="cbxCategoria" promptText="Categoria" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.halignment="CENTER"/>
+                <TableView fx:id="tblCategorias" GridPane.columnIndex="2" GridPane.rowIndex="3" GridPane.rowSpan="3" GridPane.columnSpan="2"/>
+
+                <Label text="Publicacion" GridPane.columnIndex="0" GridPane.rowIndex="3" visible="false"/>
+                <DatePicker fx:id="dtpPublicacion" GridPane.columnIndex="1" GridPane.rowIndex="3" visible="false"/>
+                <Label text="Editorial" GridPane.columnIndex="0" GridPane.rowIndex="4" visible="false"/>
+                <SearchComboBox fx:id="cbxEditorial" promptText="Editorial" GridPane.columnIndex="1" GridPane.rowIndex="4" visible="false"/>
+                <Label text="Paginas" GridPane.columnIndex="0" GridPane.rowIndex="5" visible="false"/>
+                <TextField fx:id="txtPaginas" GridPane.columnIndex="1" GridPane.rowIndex="5" visible="false"/>
+                <Label text="Contenido" GridPane.columnIndex="0" GridPane.rowIndex="6" visible="false"/>
+                <TextArea fx:id="txtContenido" GridPane.columnIndex="1" GridPane.rowIndex="6" visible="false"/>
+
+            </GridPane>
+            <HBox>
+                <CheckBox fx:id="chkArchivo" />
+                <Label text="Archivo" />
+                <TextField fx:id="txtArchivo" disable="true"/>
+                <Button text="Seleccionar"  fx:id="btnArchivo"/>
+                <SearchComboBox fx:id="cbxIdioma" promptText="Idioma"/>
+            </HBox>
+        </VBox>
+    </center>
+
+    <right>
+        <HBox>
+            <VBox>
+                <ImageView fx:id="imgLibro" fitWidth="200" fitHeight="350">
+                    <image>
+                        <Image url="/resources/null.png"/>
+                    </image>
+                </ImageView>
+                <Button text="Imagen" fx:id="btnImagen"/>
+            </VBox>
+            <VBox>
+                <Button text="New" fx:id="btnNew">
+                    <graphic>
+                        <Icons525View glyphName="CIRCLEADD" glyphSize="30" fill="green"/>
+                    </graphic>
+                </Button>
+                <Button text="Delete" fx:id="btnDelete">
+                    <graphic>
+                        <Icons525View glyphName="CIRCLEDELETE" glyphSize="30" fill="red"/>
+                    </graphic>
+                </Button>
+                <Button text="Save" fx:id="btnSave">
+                    <graphic>
+                        <Icons525View glyphName="SAVE" glyphSize="30" fill="blue"/>
+                    </graphic>
+                </Button>
+                <Button text="Cancel" fx:id="btnCancel">
+                    <graphic>
+                        <Icons525View glyphName="CANCEL" glyphSize="30" fill="black"/>
+                    </graphic>
+                </Button>
+            </VBox>
+        </HBox>
+    </right>
+
+    <bottom>
+        <TableView fx:id="tblLibros" maxHeight="300" prefHeight="300"/>
+    </bottom>
+
+</BorderPane>

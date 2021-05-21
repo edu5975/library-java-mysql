@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<?import javafx.scene.layout.GridPane?>
+<?import java.lang.String?>
+<BorderPane prefHeight="900.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="usuario.usuarioController">
+
+    <center>
+        <VBox alignment="CENTER" spacing="20">
+
+            <GridPane alignment="CENTER" hgap="5" vgap="5">
+                <Label text="Username" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                <TextField fx:id="txtUsername" promptText="Ingresa el nombre de usuario" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+                <Label text="Nombre" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                <TextField fx:id="txtNombre" promptText="Ingresa el Nombre" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+                <Label text="Apellido" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <TextField fx:id="txtApellido" promptText="Ingresa Apellido" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+                <Label text="Email" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <TextField fx:id="txtEmail" promptText="Ingresa Email" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+                <Label text="Fecha de Nacimiento" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+                <DatePicker fx:id="dateNacimiento" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+                <Label text="Contraseña" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+                <PasswordField fx:id="Contrasena" promptText="Ingresa la Contraseña" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+
+                <Label text="Vuelve a escribir la contraseña" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+                <PasswordField fx:id="VerifContrasena" promptText="Ingresa la Contraseña" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+
+            </GridPane>
+
+            <CheckBox fx:id="ckbAdmin" text="Conceder privilegios de administrador" />
+            <HBox alignment="CENTER" spacing="5">
+                <Button fx:id="Crear" text="Crear" />
+                <Button fx:id="Borrar" text="Borrar" />
+                <Button fx:id="Modificar" text="Modificar" />
+            </HBox>
+            <Label fx:id="lblerrores" style="-fx-text-fill: red" text="Defaul" />
+            <Label fx:id="lblsucess" style="-fx-text-fill: green" text="Default" />
+
+        </VBox>
+    </center>
+
+    <bottom>
+        <VBox fx:id="vboxLista">
+            <Label text="Lista de Usuarios" />
+            <TableView fx:id="tblUsuarios" />
+        </VBox>
+    </bottom>
+
+
+</BorderPane>
